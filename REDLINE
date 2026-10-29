@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>REDLINES GARAGE</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#050505;
+color:white;
+}
+
+nav{
+position:fixed;
+width:100%;
+top:0;
+background:rgba(0,0,0,0.95);
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-bottom:2px solid red;
+z-index:1000;
+}
+
+.logo{
+font-size:28px;
+font-weight:700;
+color:red;
+}
+
+nav ul{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+}
+
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+text-align:center;
+padding:20px;
+background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.9)),
+url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1600");
+background-size:cover;
+background-position:center;
+}
+
+.hero h1{
+font-size:5rem;
+color:red;
+}
+
+.hero p{
+font-size:1.3rem;
+margin-top:10px;
+max-width:800px;
+}
+
+section{
+padding:100px 8%;
+}
+
+.title{
+text-align:center;
+font-size:3rem;
+color:red;
+margin-bottom:50px;
+}
+
+.cars{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+gap:30px;
+}
+
+.card{
+background:#121212;
+border-radius:20px;
+overflow:hidden;
+transition:.4s;
+border:1px solid rgba(255,0,0,.2);
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 30px red;
+}
+
+.card img{
+width:100%;
+height:250px;
+object-fit:cover;
+}
+
+.info{
+padding:25px;
+}
+
+.info h2{
+color:red;
+margin-bottom:15px;
+}
+
+.info button{
+margin-top:20px;
+width:100%;
+padding:12px;
+background:red;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+font-weight:bold;
+}
+
+.details{
+display:none;
+margin-top:20px;
+line-height:1.8;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:40px;
+}
+
+table th{
+background:red;
+padding:15px;
+}
+
+table td{
+padding:12px;
+border:1px solid #333;
+text-align:center;
+}
+
+footer{
+text-align:center;
+padding:50px;
+border-top:2px solid red;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="logo">REDLINES GARAGE</div>
+
+<ul>
+<li><a href="#cars">Voitures</a></li>
+<li><a href="#compare">Comparatif</a></li>
+</ul>
+</nav>
+
+<section class="hero">
+<h1>REDLINES GARAGE</h1>
+<p>Les meilleures sportives Porsche & BMW avec fiches techniques complètes.</p>
+</section>
+
+<section id="cars">
+
+<h2 class="title">NOS VOITURES</h2>
+
+<div class="cars">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200">
+
+<div class="info">
+<h2>Porsche 911 GT3 RS</h2>
+
+<p>525 ch • Flat-6 Atmosphérique • Piste</p>
+
+<button onclick="show('gt3')">Voir la fiche complète</button>
+
+<div id="gt3" class="details">
+
+<h3>Histoire</h3>
+<p>
+La GT3 RS est la version ultime de la Porsche 911 orientée circuit.
+Elle utilise un moteur atmosphérique capable de monter à 9000 tr/min.
+</p>
+
+<h3>Fiche technique</h3>
+
+<p>✅ Année : 2023</p>
+<p>✅ Moteur : Flat-6 4.0L</p>
+<p>✅ Cylindres : 6</p>
+<p>✅ Puissance : 525 ch</p>
+<p>✅ Couple : 465 Nm</p>
+<p>✅ 0-100 km/h : 3.2 s</p>
+<p>✅ 0-200 km/h : 10.6 s</p>
+<p>✅ Vitesse max : 296 km/h</p>
+<p>✅ Boîte : PDK 7 rapports</p>
+<p>✅ Transmission : Propulsion</p>
+<p>✅ Poids : 1450 kg</p>
+<p>✅ Réservoir : 64 L</p>
+
+<h3>Particularités</h3>
+
+<ul>
+<li>Aileron géant actif</li>
+<li>Système DRS</li>
+<li>Pack Weissach disponible</li>
+<li>Freins carbone-céramique</li>
+<li>Développée sur le Nürburgring</li>
+</ul>
+
+<h3>Avantages</h3>
+
+<ul>
+<li>Direction parfaite</li>
+<li>Moteur atmosphérique exceptionnel</li>
+<li>Aérodynamique record</li>
+<li>Très recherchée</li>
+</ul>
+
+</div>
+</div>
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=1200">
+
+<div class="info">
+
+<h2>BMW M3 G80 Competition</h2>
+
+<p>510 ch • Twin Turbo • Berline Sportive</p>
+
+<button onclick="show('m3')">Voir la fiche complète</button>
+
+<div id="m3" class="details">
+
+<h3>Présentation</h3>
+
+<p>
+La M3 G80 est la génération actuelle de la BMW M3.
+Elle embarque le célèbre moteur S58.
+</p>
+
+<h3>Caractéristiques</h3>
+
+<p>✅ Moteur : 3.0L Twin Turbo</p>
+<p>✅ Puissance : 510 ch</p>
+<p>✅ Couple : 650 Nm</p>
+<p>✅ Cylindres : 6 en ligne</p>
+<p>✅ 0-100 km/h : 3.9 s</p>
+<p>✅ Vitesse max : 290 km/h</p>
+<p>✅ Transmission : Propulsion ou xDrive</p>
+<p>✅ Boîte : 8 rapports</p>
+<p>✅ Poids : 1730 kg</p>
+
+<h3>Préparations populaires</h3>
+
+<ul>
+<li>Stage 1 : 600 ch</li>
+<li>Stage 2 : 700 ch</li>
+<li>Échappement Akrapovic</li>
+<li>Admission carbone Eventuri</li>
+</ul>
+
+<h3>Points forts</h3>
+
+<ul>
+<li>Moteur très fiable</li>
+<li>Énorme potentiel de préparation</li>
+<li>Utilisable tous les jours</li>
+</ul>
+
+</div>
+</div>
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1489824904134-891ab64532f1?w=1200">
+
+<div class="info">
+
+<h2>BMW M2 G87</h2>
+
+<p>460 ch • Compacte Extrême</p>
+
+<button onclick="show('m2')">Voir la fiche complète</button>
+
+<div id="m2" class="details">
+
+<h3>Présentation</h3>
+
+<p>
+La M2 G87 reprend le moteur S58 de la M3 avec un format plus compact.
+</p>
+
+<h3>Fiche complète</h3>
+
+<p>✅ 460 ch</p>
+<p>✅ 550 Nm</p>
+<p>✅ Propulsion</p>
+<p>✅ 4.1 secondes au 0-100</p>
+<p>✅ Boîte manuelle disponible</p>
+<p>✅ Vitesse max : 285 km/h</p>
+<p>✅ Poids : 1725 kg</p>
+
+<h3>Préparation</h3>
+
+<ul>
+<li>Stage 1 : 540 ch</li>
+<li>Stage 2 : 620 ch</li>
+<li>Downpipe sport</li>
+<li>Admission performance</li>
+</ul>
+
+<h3>Concurrentes</h3>
+
+<ul>
+<li>Audi RS3</li>
+<li>Mercedes-AMG A45S</li>
+<li>Toyota Supra</li>
+</ul>
+
+</div>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section id="compare">
+
+<h2 class="title">COMPARATIF</h2>
+
+<table>
+
+<tr>
+<th>Modèle</th>
+<th>Puissance</th>
+<th>0-100</th>
+<th>Vitesse max</th>
+<th>Transmission</th>
+</tr>
+
+<tr>
+<td>Porsche GT3 RS</td>
+<td>525 ch</td>
+<td>3.2 s</td>
+<td>296 km/h</td>
+<td>Propulsion</td>
+</tr>
+
+<tr>
+<td>BMW M3 G80</td>
+<td>510 ch</td>
+<td>3.9 s</td>
+<td>290 km/h</td>
+<td>Propulsion/xDrive</td>
+</tr>
+
+<tr>
+<td>BMW M2 G87</td>
+<td>460 ch</td>
+<td>4.1 s</td>
+<td>285 km/h</td>
+<td>Propulsion</td>
+</tr>
+
+</table>
+
+</section>
+
+<footer>
+<h2>REDLINES GARAGE</h2>
+<p>Le garage des passionnés Porsche & BMW</p>
+</footer>
+
+<script>
+function show(id){
+
+let x=document.getElementById(id);
+
+if(x.style.display==="block"){
+x.style.display="none";
+}
+else{
+x.style.display="block";
+}
+
+}
+</script>
+
+</body>
+</html>
